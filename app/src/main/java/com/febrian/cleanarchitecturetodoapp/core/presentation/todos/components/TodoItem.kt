@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -22,11 +23,12 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.febrian.cleanarchitecturetodoapp.core.data.source.entity.Todo
 import com.febrian.cleanarchitecturetodoapp.core.presentation.utils.Screen
+import com.febrian.cleanarchitecturetodoapp.utils.TestTags
 
-@Preview( showBackground = true)
+@Preview(showBackground = true)
 @Composable
 fun TodoItem(
-    todo: Todo = Todo("Todo","Todo",0,1),
+    todo: Todo = Todo("Todo", "Todo", 0, 1),
     navController: NavController = rememberNavController(),
     onDeleteClick: () -> Unit = {}
 ) {
@@ -44,7 +46,8 @@ fun TodoItem(
                     Screen.AddEditTodoScreen.route +
                             "?todoId=${todo.id}&todoColor=${todo.color}"
                 )
-            },
+            }
+            .testTag(TestTags.NOTE_ITEM)
 
     ) {
         Column(

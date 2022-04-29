@@ -16,6 +16,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -26,6 +27,7 @@ import com.febrian.cleanarchitecturetodoapp.core.domain.utils.LayoutType
 import com.febrian.cleanarchitecturetodoapp.core.presentation.todos.components.OrderSection
 import com.febrian.cleanarchitecturetodoapp.core.presentation.todos.components.TodoItem
 import com.febrian.cleanarchitecturetodoapp.core.presentation.utils.Screen
+import com.febrian.cleanarchitecturetodoapp.utils.TestTags
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -88,7 +90,8 @@ fun TodoScreen(
                 OrderSection(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 16.dp),
+                        .padding(vertical = 16.dp)
+                        .testTag(TestTags.ORDER_SECTION),
                     todoOrder = state.todoOrder,
                     layoutType = state.todoLayoutType,
                     onOrderChange = { viewModel.onEvent(TodoEvents.Order(it)) },
