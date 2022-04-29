@@ -12,3 +12,6 @@ val RedPink = Color(0xfff48fb1)
 val BabyBlue = Color(0xff81deea)
 val Violet = Color(0xffcf94da)
 val LightGreen = Color(0xffe7ed9b)
+
+val BluePrimary = Color(0xFF2196F3)
+val BlueSecondary = Color(0xFF03A9F4)

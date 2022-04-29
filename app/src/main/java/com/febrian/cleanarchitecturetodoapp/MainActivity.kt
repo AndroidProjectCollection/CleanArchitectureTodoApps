@@ -3,7 +3,6 @@ package com.febrian.cleanarchitecturetodoapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -13,7 +12,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.febrian.cleanarchitecturetodoapp.core.presentation.add_edit.AddEditTodoScreen
-import com.febrian.cleanarchitecturetodoapp.core.presentation.add_edit.AddEditViewModel
 import com.febrian.cleanarchitecturetodoapp.core.presentation.todos.TodoScreen
 import com.febrian.cleanarchitecturetodoapp.core.presentation.utils.Screen
 import com.febrian.cleanarchitecturetodoapp.ui.theme.CleanArchitectureTodoAppTheme

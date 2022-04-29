@@ -1,6 +1,5 @@
 package com.febrian.cleanarchitecturetodoapp.core.domain.usecase
 
-import com.febrian.cleanarchitecturetodoapp.core.data.repository.TodoRepository
 import com.febrian.cleanarchitecturetodoapp.core.data.source.entity.Todo
 import com.febrian.cleanarchitecturetodoapp.core.domain.repository.ITodoRepository
 import com.febrian.cleanarchitecturetodoapp.core.domain.utils.OrderType
